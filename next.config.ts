@@ -7,9 +7,7 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   webpack(config, { isServer }) {
     if (!isServer) {
-      config.plugins!.push(
-        new WebpackObfuscator(obfuscatorOptions, ['runtime~*.js'])
-      );
+      config.plugins!.push(new WebpackObfuscator(obfuscatorOptions, ['runtime~*.js']));
     }
     return config;
   },

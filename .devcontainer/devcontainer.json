@@ -19,7 +19,8 @@
       "settings": {
         "files.insertFinalNewline": true,
         "editor.formatOnSave": true,
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSaveMode": "modificationsIfAvailable"
       },
       "extensions": [
         "ms-vscode.vscode-typescript-next",
