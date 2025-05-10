@@ -8,7 +8,17 @@
 
 ## Overview
 
-This repository is a **Next.js** template bootstrapped using `create-next-app`, enhanced with TypeScript, Tailwind CSS, ESLint, and Prettier. It also incorporates advanced code protection using [webpack-obfuscator](https://github.com/javascript-obfuscator/webpack-obfuscator) for client-side bundles. The development environment is set up in a dev container running on **Debian GNU/Linux 12 (bookworm)**.
+This repository is a **Next.js** template bootstrapped using `create-next-app` with the following configuration:
+
+- **TypeScript:** enabled
+- **ESLint:** enabled
+- **Tailwind CSS:** enabled
+- **Source Directory:** code is housed inside a `src/` directory
+- **App Router:** enabled (recommended)
+- **Turbopack:** disabled
+- **Import alias:** default (`@/*`)
+
+It also incorporates advanced code protection using [webpack-obfuscator](https://github.com/javascript-obfuscator/webpack-obfuscator) for client-side bundles. The development environment is set up in a dev container running on **Debian GNU/Linux 12 (bookworm)**.
 
 ## Features
 
@@ -17,7 +27,7 @@ This repository is a **Next.js** template bootstrapped using `create-next-app`, 
 - **Tailwind CSS** – for a utility-first approach to styling.
 - **ESLint & Prettier** – to enforce consistent code style and catch common issues.
 - **Webpack Obfuscator** – to protect your client-side code via smart obfuscation.
-- **Dev Container** – preconfigured environment using the official Node.js & TypeScript dev container image.
+- **Dev Container** – preconfigured environment using the official Node.js & TypeScript dev container image with preinstalled VS Code extensions.
 
 ## Getting Started
 
@@ -53,10 +63,8 @@ $BROWSER http://localhost:3000
 
 ## Project Structure & Configuration
 
-- **Pages & API:**
-
-  - Frontend pages are in the `pages` directory.
-  - API routes are defined in `pages/api` and are mapped to `/api/*`.
+- **Source Code:**  
+  Your application code is located inside the `src/` directory. When using the App Router, the route definitions are found in `src/app`.
 
 - **Webpack & Obfuscation:**  
   The `next.config.ts` integrates `webpack-obfuscator` to obfuscate non-server (client) bundles using the settings specified in `obfuscator.config.ts`.
@@ -72,28 +80,6 @@ $BROWSER http://localhost:3000
 - `lint` – Run ESLint on the codebase.
 - `format` – Format the code with Prettier.
 - `format:check` – Check for unformatted files.
-
-## Deployment
-
-To deploy your application, build it using:
-
-```bash
-pnpm build
-```
-
-Then start the production server with:
-
-```bash
-pnpm start
-```
-
-Consult the [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
-
-## Learn More
-
-- **Next.js Documentation:** [https://nextjs.org/docs](https://nextjs.org/docs)
-- **Tailwind CSS Documentation:** [https://tailwindcss.com/docs](https://tailwindcss.com/docs)
-- **Webpack Obfuscator:** [https://github.com/javascript-obfuscator/webpack-obfuscator](https://github.com/javascript-obfuscator/webpack-obfuscator)
 
 ---
 
