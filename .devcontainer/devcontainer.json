@@ -1,43 +1,42 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/typescript-node
 {
-	"name": "Node.js & TypeScript",
-	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
-	"features": {
-		"ghcr.io/devcontainers-extra/features/pnpm:2": {}
-	},
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {},
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [
-		3000
-	],
-	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "pnpm install",
-	// Configure tool-specific properties.
-	"customizations": {
-		"vscode": {
-			"settings": {
-				"editor.formatOnSave": true,
-				"editor.defaultFormatter": "esbenp.prettier-vscode"
-			},
-			"extensions": [
-				"ms-vscode.vscode-typescript-next",
-				"dbaeumer.vscode-eslint",
-				"visualstudioexptteam.vscodeintellicode",
-				"visualstudioexptteam.intellicode-api-usage-examples",
-				"pkief.material-icon-theme",
-				"csstools.postcss",
-				"esbenp.prettier-vscode",
-				"bradlc.vscode-tailwindcss",
-				"blanu.vscode-styled-jsx",
-				"dsznajder.es7-react-js-snippets",
-				"mikestead.dotenv",
-				"ecmel.vscode-html-css"
-			]
-		}
-	}
-	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "root"
+  "name": "Node.js & TypeScript",
+  // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
+  "features": {
+    "ghcr.io/devcontainers-extra/features/pnpm:2": {}
+  },
+  // Features to add to the dev container. More info: https://containers.dev/features.
+  // "features": {},
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  "forwardPorts": [3000],
+  // Use 'postCreateCommand' to run commands after the container is created.
+  "postCreateCommand": "pnpm install",
+  // Configure tool-specific properties.
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "files.insertFinalNewline": true,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      },
+      "extensions": [
+        "ms-vscode.vscode-typescript-next",
+        "dbaeumer.vscode-eslint",
+        "visualstudioexptteam.vscodeintellicode",
+        "visualstudioexptteam.intellicode-api-usage-examples",
+        "pkief.material-icon-theme",
+        "csstools.postcss",
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss",
+        "blanu.vscode-styled-jsx",
+        "dsznajder.es7-react-js-snippets",
+        "mikestead.dotenv",
+        "ecmel.vscode-html-css"
+      ]
+    }
+  }
+  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+  // "remoteUser": "root"
 }
