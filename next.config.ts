@@ -5,8 +5,8 @@ import obfuscatorOptions from './obfuscator.config';
 const nextConfig: NextConfig = {
   /* config options here */
   reactStrictMode: true,
-  webpack(config, { isServer }) {
-    if (!isServer) {
+  webpack(config, { isServer, dev }) {
+    if (!isServer && !dev) {
       config.plugins!.push(new WebpackObfuscator(obfuscatorOptions, ['runtime~*.js']));
     }
     return config;
